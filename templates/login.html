@@ -1,0 +1,42 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+    
+        <div class="gap"></div>
+        <div class="container">
+            <div class="row" data-gutter="60">
+                
+                <div class="col-md-6">
+                    <h3>Login</h3>
+                    <form id="login"  method="post" enctype="multipart/form-data">
+                        <div class="form-group form-group-icon-left"><i class="fa fa-user input-icon input-icon-show"></i>
+                            <label>Username</label>
+                            <input class="form-control" placeholder="e.g. johndoe@gmail.com" type="text" id="username"/>
+                        </div>
+                        <div id="patternHolder1" class="pattern-holder patt-holder">
+
+                        </div>
+                        <input class="btn btn-primary" type="button" value="Sign in"  id="signin" />
+                    </form>
+                </div>
+                <div class="col-md-6">
+                    <h3>New To iChat.mn?</h3>
+                    <form id="add-user" method="post" enctype="multipart/form-data">
+                        <div class="form-group form-group-icon-left"><i class="fa fa-user input-icon input-icon-show"></i>
+                            <label>Username</label>
+                            <input class="form-control" placeholder="e.g. John Doe" type="text"  id="rusername"/>
+                        </div>
+                        <div id="patternHolder" class="pattern-holder patt-holder">
+
+                        </div>
+                        <input id ="add_user" class="btn btn-primary" type="button" value="Sign up for iChat.mn" />
+                    </form>
+                </div>
+            </div>
+        </div>
+
+{% endblock %}
+{% block scripting %}
+    {{parent()}}
+{% endblock %}
